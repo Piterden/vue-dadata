@@ -73,7 +73,9 @@ export default {
 
     sendRequest (value) {
       console.log('Request')
-      // ,,,,,,,,,,,,
+      this.$http.post(url, data)
+        .then(this.onSuccess)
+        .catch(this.onError)
     },
 
     onSuccess (res) {
